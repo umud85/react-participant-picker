@@ -1,36 +1,8 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
+import { getData } from './dummyData';
 
-// const myData = [
-//   "Imad Alisawi",
-//   "Eugenia Valentina",
-//   "Elias El Herrera",
-//   "Yeran Kim",
-//   "Marius Meyer",
-//   "Madeline Streubel",
-//   "Roberto Radina",
-//   "Jörg Schmitz",
-//   "Steven Günther",
-//   "Burhan Uzun",
-//   "Alexandra Popiel",
-//   "Taha Yasin Uzun",
-//   "David Cohnen",
-//   "Afsaneh Heidari Fasakhodi",
-//   "Claudia Maslowski",
-//   "Nargiza Nizamedinkhodjayeva",
-//   "Bastian Wilke",
-//   "Giancarlo Scalisi",
-//   "Joel Buchholz",
-//   "Roberto Jimenez",
-//   "Anila Qasemi",
-//   "Parisa Mohammadi"
-// ];
-
-const myData = [
-  "Imad Alisawi",
-  "Eugenia Valentina",
-  "Elias El Herrera",
-];
+const myData = getData();
 
 function App() {
   const [data, setData] = useState(myData);
@@ -41,7 +13,6 @@ function App() {
       setIsEmpty(true);
     }
     const random = Math.floor(Math.random() * data.length);
-    console.log(random);
     setParticipant(data[random]);
   }
   const resetData = () => {
