@@ -26,6 +26,7 @@ function App() {
   return (
     <div className="App">
       <h1>Random Participant Picker</h1>
+      <hr />
       <ul>
         {participant && <li key={participant} className="picked">{participant}</li>}
         {data.map((person) => {
